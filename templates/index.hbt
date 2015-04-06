@@ -10,8 +10,10 @@
 
         <ul>
             {{#each posts }}
-            <span>{{ formatDate date }}</span>
-            <a href="{{path}}">{{ title }}</a>
+            <li>
+                <span>{{ formatDate date }}</span>
+                <a href="{{path}}">{{ title }}</a>
+            </li>
             {{/each }}
         </ul>
 

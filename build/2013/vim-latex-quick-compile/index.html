@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>halvdan | Vim LaTeX quick compile</title>
+    </head>
+    <body>
+        <header>
+            <a href="/">halvdan.github.io</a>
+        </header>
+        <h1>Vim LaTeX quick compile</h1>
+
+        <div class="timestamp">
+            <p>Posted at: <span class="date">21 Feb 2013</span></p>
+        </div>
+
+        <article>
+            <p>Whenever it is time to write assignments or whatever in LaTeX I find myself using to compile the result in order to see how the formulae came out and whether it needs to be spaced more between the equations and such.</p>
+<p>This command has proved to be very useful for me since I haven&#39;t dabbled with vim-latex nor have had the need for such a comprehensive toolset.</p>
+<p>Just add this to your .vimrc and get back to work. Replace what key you are using (in my case it is F9) and what you use to create your .pdf files (here I use pdflatex).</p>
+<pre><code class="lang-vim">" ~/.vimrc
+noremap &lt;F9&gt; :!pdflatex %&lt;cr&gt;
+inoremap &lt;F9&gt; &lt;esc&gt;:!pdflatex %&lt;cr&gt;
+</code></pre>
+
+        </article>
+
+        <footer>
+            <a href="https://github.com/halvdan">Github</a>
+            <a href="https://twitter.com/halvdan_">Twitter</a>
+        </footer>
+    </body>
+</html>

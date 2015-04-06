@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>halvdan | Adding printers on Arch Linux at Chalmers</title>
+    </head>
+    <body>
+        <header>
+            <a href="/">halvdan.github.io</a>
+        </header>
+        <h1>Adding printers on Arch Linux at Chalmers</h1>
+
+        <div class="timestamp">
+            <p>Posted at: <span class="date">25 Feb 2013</span></p>
+        </div>
+
+        <article>
+            <p>Okay, so this may not be of so much use to anyone else but I fiddled with this earlier and decided to document it for future reference.</p>
+<p>Using instructions from the <a href="https://wiki.archlinux.org/">excellent wiki</a> on <a href="https://wiki.archlinux.org/index.php/CUPS_printer_sharing#Configuration_using_the_web_interface">CUPS</a> and <a href="https://student.portal.chalmers.se/sv/kontaktochservice/it-passerkort-kopiering/egenadministrerad/linux/utskrifter/Sidor/anslut-till-skrivare.aspx">how to add a Chalmers printer</a> (in Swedish) I managed to get it working.</p>
+<p>Using the CUPS web interface, accessed at <a href="http://localhost:631">http://localhost:631</a>, I could add a printer by clicking the administration tab and clicking the &quot;Add Printer&quot; (duh) and then following Chalmers instructions from there with the exception of using the below device URI instead.</p>
+<pre><code>smb://NET\cid:password@print.chalmers.se/name_of_printer
+</code></pre>
+        </article>
+
+        <footer>
+            <a href="https://github.com/halvdan">Github</a>
+            <a href="https://twitter.com/halvdan_">Twitter</a>
+        </footer>
+    </body>
+</html>
