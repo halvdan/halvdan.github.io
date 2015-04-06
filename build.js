@@ -9,8 +9,6 @@ var handlebars = require('handlebars');
 var moment = require('moment');
 var fs = require('fs');
 
-handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/partials/header.hbt').toString());
-handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/templates/partials/footer.hbt').toString());
 handlebars.registerHelper('formatDate', function(datetime) {
     return moment(datetime).format('DD MMM YYYY');
 });
@@ -55,7 +53,11 @@ metalsmith(__dirname)
     }))
     .use(templates({
         engine: 'handlebars',
-        directory: 'templates'
+        directory: 'templates',
+        partials: {
+            header: 'partials/header',
+            footer: 'partials/footer'
+        }
     }))
     .destination('build')
     .build(function (err) {
